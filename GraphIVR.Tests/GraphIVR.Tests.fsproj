@@ -59,7 +59,6 @@
     <Compile Include="BuildGraphTests.fs" />
     <Content Include="packages.config" />
     <Content Include="App.config" />
-    <Compile Include="TempTests.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="FsCheck">
