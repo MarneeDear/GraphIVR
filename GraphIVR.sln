@@ -15,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{87CDCB12
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "cypher queries", "cypher queries", "{CF8DF0F4-DC6F-4ED9-B75E-A43FE6B768A0}"
 	ProjectSection(SolutionItems) = preProject
-		RebuildGraph.cql = RebuildGraph.cql
+		cypher queries\RebuildGraph.cql = cypher queries\RebuildGraph.cql
 	EndProjectSection
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "GraphIVR.Tests", "GraphIVR.Tests\GraphIVR.Tests.fsproj", "{2E6C81B0-582C-4019-A4BD-BB1BDAB9212B}"
