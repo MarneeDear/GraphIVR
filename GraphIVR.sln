@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphIVR.WebHost", "GraphIVR\GraphIVR.WebHost.csproj", "{BE755C57-83CB-4EBB-9667-F69C7908D947}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "GraphIVR.Core", "GraphIVR.Core\GraphIVR.Core.fsproj", "{CCDF0C22-5105-42D5-926F-36A292F0F126}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "GraphIVR.Infrastructure", "GraphIVR.Infrastructure\GraphIVR.Infrastructure.fsproj", "{33A7BC4A-231B-40FF-8652-41FF9F47F118}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "GraphIVR.Web", "GraphIVR.Web\GraphIVR.Web.fsproj", "{8DDC6BE4-32D6-4B32-9C5C-EED84FEFE0A8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{87CDCB12-3DB5-4B0F-BEB3-7FEE0800B87C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "cypher queries", "cypher queries", "{CF8DF0F4-DC6F-4ED9-B75E-A43FE6B768A0}"
+	ProjectSection(SolutionItems) = preProject
+		RebuildGraph.cql = RebuildGraph.cql
+	EndProjectSection
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "GraphIVR.Tests", "GraphIVR.Tests\GraphIVR.Tests.fsproj", "{2E6C81B0-582C-4019-A4BD-BB1BDAB9212B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE755C57-83CB-4EBB-9667-F69C7908D947}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE755C57-83CB-4EBB-9667-F69C7908D947}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE755C57-83CB-4EBB-9667-F69C7908D947}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE755C57-83CB-4EBB-9667-F69C7908D947}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCDF0C22-5105-42D5-926F-36A292F0F126}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCDF0C22-5105-42D5-926F-36A292F0F126}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCDF0C22-5105-42D5-926F-36A292F0F126}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCDF0C22-5105-42D5-926F-36A292F0F126}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33A7BC4A-231B-40FF-8652-41FF9F47F118}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33A7BC4A-231B-40FF-8652-41FF9F47F118}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33A7BC4A-231B-40FF-8652-41FF9F47F118}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33A7BC4A-231B-40FF-8652-41FF9F47F118}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DDC6BE4-32D6-4B32-9C5C-EED84FEFE0A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DDC6BE4-32D6-4B32-9C5C-EED84FEFE0A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DDC6BE4-32D6-4B32-9C5C-EED84FEFE0A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DDC6BE4-32D6-4B32-9C5C-EED84FEFE0A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E6C81B0-582C-4019-A4BD-BB1BDAB9212B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E6C81B0-582C-4019-A4BD-BB1BDAB9212B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E6C81B0-582C-4019-A4BD-BB1BDAB9212B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E6C81B0-582C-4019-A4BD-BB1BDAB9212B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2E6C81B0-582C-4019-A4BD-BB1BDAB9212B} = {87CDCB12-3DB5-4B0F-BEB3-7FEE0800B87C}
+	EndGlobalSection
+EndGlobal
