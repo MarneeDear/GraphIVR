@@ -7,16 +7,16 @@ open System.Collections.Generic
 
 type NodeProperties = 
     {
-        id: int64
+        id: int
         title: string
         message: string
-        retries: int64 option
-    }
-
-type RetryProperties =
-    {
         retries: int
     }
+
+//type RetryProperties =
+//    {
+//        retries: int
+//    }
 
 //type RelationshipProperties = 
 //    {

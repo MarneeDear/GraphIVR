@@ -98,6 +98,18 @@
       <Private>True</Private>
     </Reference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GraphIVR.Core\GraphIVR.Core.fsproj">
+      <Name>GraphIVR.Core</Name>
+      <Project>{ccdf0c22-5105-42d5-926f-36a292f0f126}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\GraphIVR.Infrastructure\GraphIVR.Infrastructure.fsproj">
+      <Name>GraphIVR.Infrastructure</Name>
+      <Project>{33a7bc4a-231b-40ff-8652-41ff9f47f118}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
