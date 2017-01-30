@@ -59,6 +59,7 @@
     <Compile Include="BuildGraphTests.fs" />
     <Content Include="packages.config" />
     <Content Include="App.config" />
+    <Compile Include="FuchuTests.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="FsCheck">
@@ -71,6 +72,10 @@
     </Reference>
     <Reference Include="FsUnit.Xunit">
       <HintPath>..\packages\FsUnit.xUnit.1.4.1.0\lib\net45\FsUnit.Xunit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fuchu">
+      <HintPath>..\packages\Fuchu.1.0.3.0\lib\Fuchu.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="mscorlib" />

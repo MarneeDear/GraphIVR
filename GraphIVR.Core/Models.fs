@@ -4,6 +4,8 @@ open System
 open System.Text
 open System.ComponentModel.DataAnnotations
 open System.Collections.Generic
+open Neo4jClient.Extension.Cypher.Attributes
+open Neo4jClient.Extension.Cypher
 
 type NodeProperties = 
     {
@@ -13,7 +15,57 @@ type NodeProperties =
         retries: int
     }
 
-//type RetryProperties =
+type RelationshipBase =
+    {
+        FromKey: string
+        ToKey: string
+        Key: string
+    }
+
+//[<CypherLabel(Name = LabelName)>]
+type GotoRelationship = 
+    {
+        Relationship: RelationshipBase
+    }
+
+type SuccessRelationship = 
+    {
+       Relationship: RelationshipBase
+    }
+
+type FailureRelationship = 
+    {
+        Relationship: RelationshipBase
+    }
+
+type StartNode = 
+    {
+        Properties: NodeProperties
+    }
+
+type EndNode = 
+    {
+        Properties: NodeProperties
+    }
+
+type Node =
+    | START of StartNode
+    | END of EndNode
+//    | ENTRY of NodeProperties
+//    | RETRY of NodeProperties //* RetryProperties
+//    | RESPONSE of NodeProperties
+
+type Relationship = 
+    | GOTO of GotoRelationship
+    | SUCCESS of SuccessRelationship
+    | FAIL of FailureRelationship
+
+type Path = 
+    | GoToNext of Node * Relationship
+    | Failure of Node * Relationship
+    | Success of Node * Relationship
+
+    //type RetryProperties =
 //    {
 //        retries: int
 //    }
@@ -22,20 +74,3 @@ type NodeProperties =
 //    {
 //        
 //    }
-
-type Node =
-    | START of NodeProperties
-    | END of NodeProperties
-    | ENTRY of NodeProperties
-    | RETRY of NodeProperties //* RetryProperties
-    | RESPONSE of NodeProperties
-
-type Relationship = 
-    | GOTO
-    | SUCCESS
-    | FAIL
-
-type Path = 
-    | GoToNext of Node * Relationship
-    | Failure of Node * Relationship * Node
-    | Success of Node * Relationship
