@@ -4,8 +4,8 @@ open System
 open System.Text
 open System.ComponentModel.DataAnnotations
 open System.Collections.Generic
-open Neo4jClient.Extension.Cypher.Attributes
 open Neo4jClient.Extension.Cypher
+
 
 type NodeProperties = 
     {
@@ -15,28 +15,21 @@ type NodeProperties =
         retries: int
     }
 
-type RelationshipBase =
-    {
-        FromKey: string
-        ToKey: string
-        Key: string
-    }
+//type BaseRelationship(fromKey:string, toKey:string, key:string) =
+//
+//    member x.FromKey = fromKey
+//    member x.ToKey = toKey
+//    member x.Key = key
 
 //[<CypherLabel(Name = LabelName)>]
-type GotoRelationship = 
-    {
-        Relationship: RelationshipBase
-    }
+type GotoRelationship(fromKey:string, toKey:string, key:string) = 
+    inherit BaseRelationship(fromKey, toKey, key)
 
-type SuccessRelationship = 
-    {
-       Relationship: RelationshipBase
-    }
+type SuccessRelationship(fromKey:string, toKey:string, key:string) = 
+    inherit BaseRelationship(fromKey, toKey, key)
 
-type FailureRelationship = 
-    {
-        Relationship: RelationshipBase
-    }
+type FailureRelationship(fromKey:string, toKey:string, key:string) = 
+    inherit BaseRelationship(fromKey, toKey, key)
 
 type StartNode = 
     {
