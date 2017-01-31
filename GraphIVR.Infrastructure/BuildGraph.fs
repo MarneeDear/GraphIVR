@@ -16,23 +16,23 @@ module BuildGraph =
 
     let StartNode = FluentConfig.Config()
                         .With<GraphIVR.Core.Models.StartNode>("START")
-                        .Match(fun x -> x.id)
-                        .Merge(fun x -> x.id)
-                        .MergeOnCreate(fun x -> x.id)
-                        .MergeOnMatchOrCreate(fun x -> x.message)
-                        .MergeOnMatchOrCreate(fun x -> x.retries)
-                        .MergeOnMatchOrCreate(fun x -> x.title)
+                        .Match(fun x -> x.Properties.id)
+                        .Merge(fun x -> x.Properties.id)
+                        .MergeOnCreate(fun x -> x.Properties.id)
+                        .MergeOnMatchOrCreate(fun x -> x.Properties.message)
+                        .MergeOnMatchOrCreate(fun x -> x.Properties.retries)
+                        .MergeOnMatchOrCreate(fun x -> x.Properties.title)
                         .Set()
     //                    .MergeOnMatchOrCreate
 
     let EndNode = FluentConfig.Config()
-                        .With<GraphIVR.Core.Models.NodeProperties>("END")
-                        .Match(fun x -> x.id)
-                        .Merge(fun x -> x.id)
-                        .MergeOnCreate(fun x -> x.id)
-                        .MergeOnMatchOrCreate(fun x -> x.message)
-                        .MergeOnMatchOrCreate(fun x -> x.retries)
-                        .MergeOnMatchOrCreate(fun x -> x.title)
+                        .With<GraphIVR.Core.Models.EndNode>("END")
+                        .Match(fun x -> x.Properties.id)
+                        .Merge(fun x -> x.Properties.id)
+                        .MergeOnCreate(fun x -> x.Properties.id)
+                        .MergeOnMatchOrCreate(fun x -> x.Properties.message)
+                        .MergeOnMatchOrCreate(fun x -> x.Properties.retries)
+                        .MergeOnMatchOrCreate(fun x -> x.Properties.title)
                         .Set()
 
     
@@ -70,17 +70,17 @@ module BuildGraph =
 
     let GotoRelationship = FluentConfig.Config()
                             .With<GraphIVR.Core.Models.GotoRelationship>("GOTO")
-                            .MergeOnMatchOrCreate(fun r -> r.Relationship.Key)
+                            .MergeOnMatchOrCreate(fun r -> r.Key)
                             .Set();
                         
     let SuccessRelationship = FluentConfig.Config()
                                 .With<GraphIVR.Core.Models.SuccessRelationship>("SUCCESS")
-                                .MergeOnMatchOrCreate(fun r -> r.Relationship.Key)
+                                .MergeOnMatchOrCreate(fun r -> r.Key)
                                 .Set();
 
     let FailureRelationship = FluentConfig.Config()
                                 .With<GraphIVR.Core.Models.FailureRelationship>("FAILURE")
-                                .MergeOnMatchOrCreate(fun r -> r.Relationship.Key)
+                                .MergeOnMatchOrCreate(fun r -> r.Key)
                                 .Set();
 
 
@@ -130,8 +130,8 @@ module BuildGraph =
         let relationshipResult =
             match rel with
             | GOTO r -> query.MergeRelationship(r) //TODO relationship class needs to inherit BaseRelationship
-            | SUCCESS r -> r1
-            | FAIL r -> r1
+            | SUCCESS r -> query.MergeRelationship(r)
+            | FAIL r -> query.MergeRelationship(r)
         
 //        query.CreateEntity()
     //    ICypherFluentQuery query = new Fl

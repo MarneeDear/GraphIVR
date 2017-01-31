@@ -13,7 +13,7 @@ module BuildGraphTestsIClassFixture =
             let node =
                 START(
                     {
-                        id = 99
+                        Properties.id = 99
                         title = "TEST"
                         message = "TEST TEST TEST" 
                         retries = 0
