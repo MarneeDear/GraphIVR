@@ -56,10 +56,10 @@
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
     <Compile Include="Fixtures.fs" />
+    <Compile Include="FuchuTests.fs" />
     <Compile Include="BuildGraphTests.fs" />
     <Content Include="packages.config" />
     <Content Include="App.config" />
-    <Compile Include="FuchuTests.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="FsCheck">
