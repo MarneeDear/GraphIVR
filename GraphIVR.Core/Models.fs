@@ -7,12 +7,18 @@ type Label =
     | RETRY 
     | RESPONSE 
 
+type Relationship = 
+    | GOTO 
+    | SUCCESS 
+    | FAIL 
+
+
 type NodeProperties = 
     {
-        Id: int
-        Title: string
-        Message: string
-        Retries: int
+        id: int
+        title: string
+        message: string
+        retries: int
 
     }
 
@@ -22,11 +28,8 @@ type IVRNode =
         Properties: NodeProperties
     }
 
-type Relationship = 
-    | GOTO 
-    | SUCCESS 
-    | FAIL 
+type IVRPath = IVRNode * Relationship * IVRNode
 
-type Path = IVRNode * Relationship * IVRNode
+type Pair = IVRNode * IVRNode
 
 
