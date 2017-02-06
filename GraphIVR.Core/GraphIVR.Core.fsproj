@@ -52,7 +52,6 @@
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
     <Compile Include="ROP.fs" />
-    <Compile Include="ModelsFluent.fs" />
     <Compile Include="Models.fs" />
     <Compile Include="Interfaces.fs" />
     <Content Include="packages.config" />
@@ -63,18 +62,6 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="mscorlib" />
-    <Reference Include="Neo4jClient">
-      <HintPath>..\packages\Neo4jClient.1.1.0.1\lib\net45\Neo4jClient.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Neo4jClient.Extension">
-      <HintPath>..\packages\Neo4jClient.Extension.1.0.1\lib\net45\Neo4jClient.Extension.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Neo4jClient.Extension.Attributes">
-      <HintPath>..\packages\Neo4jClient.Extension.Attributes.1.0.1\lib\net45\Neo4jClient.Extension.Attributes.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
