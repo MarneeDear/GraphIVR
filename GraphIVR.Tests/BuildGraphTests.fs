@@ -13,10 +13,11 @@ let ``Can create a START node`` () =
             Label = Label.START
             Properties = 
                 {
-                    Id = 78878
-                    Title = "TEST"
-                    Message = "TEST"
-                    Retries = 0
+                    id = 78878
+                    title = "TEST"
+                    message = "TEST"
+                    retries = 0
                 }
         }
     BuildGraph.createNode(node)
+    BuildGraph.deleteNode(node)
