@@ -63,7 +63,7 @@ module BuildGraphTypeProviderTest =
                 .Return(fun (e1:ICypherResultItem) (e2:ICypherResultItem) -> (e1.As<IVRSchema.Proxies.ENTRY>(), e2.As<IVRSchema.Proxies.ENTRY>()))
                 .Results
         successPath |> Seq.length |> should equal 1
-        let e1Node, e2Node = successPath |> Seq.head
+        let _, e2Node = successPath |> Seq.head
         e2Node.title |> should equal "PIN"
         
         let failurePath = 
@@ -73,5 +73,5 @@ module BuildGraphTypeProviderTest =
                 .Return(fun (e:ICypherResultItem) (re:ICypherResultItem) -> (e.As<IVRSchema.Proxies.ENTRY>(), re.As<IVRSchema.Proxies.RETRY>()))
                 .Results
         failurePath |> Seq.length |> should equal 1
-        let e, re = failurePath |> Seq.head
+        let _, re = failurePath |> Seq.head
         re.title |> should equal "RETRY CUSTOMER NUMBER"
