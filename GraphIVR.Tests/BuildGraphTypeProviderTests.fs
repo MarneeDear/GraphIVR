@@ -36,8 +36,8 @@ module BuildGraphTypeProviderTest =
         let data =
             db.Cypher
                 .Match("(n)")
-                .Where(fun (n:NodeProperties) -> n.id = 1)
-                .Return<NodeProperties>("n")
+                .Where(fun (n:IVRSchema.Proxies.START) -> n.id = "1")
+                .Return<IVRSchema.Proxies.START>("n")
                 .Results
         data
         |> Seq.length 
