@@ -24,6 +24,8 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ScratchPad", "ScratchPad\Sc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphIVR.WebHost", "GraphIVR.WebHost\GraphIVR.WebHost.csproj", "{BE755C57-83CB-4EBB-9667-F69C7908D947}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{28CDEBDA-27BA-4967-98FA-07A43A148F36}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
