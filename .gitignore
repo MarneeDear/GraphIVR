@@ -213,3 +213,5 @@ ModelManifest.xml
 
 /GraphIVR.WebHost/vue_dist
 /GraphIVR.WebHost/dist
+/GraphIVR.WebHost/Scripts/*.map
+/GraphIVR.WebHost/Scripts/*.js
